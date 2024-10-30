@@ -39,17 +39,6 @@ The app should now be running at `http://localhost:5173`.
    - **Up/Down**: Changing the counting direction.
    - **Delete**: Removing the counter.
 
-## Project Structure
-
-```
-.
-├── src
-│   ├── Counter.js         # Counter component
-│   ├── App.js             # Main app component
-│   └── App.css            # Custom CSS for the app
-└── README.md              # Project documentation
-```
-
 ## Technologies Used
 
 - **React** - JavaScript library for building the user interface
@@ -60,4 +49,4 @@ The app should now be running at `http://localhost:5173`.
 Pull requests are welcome! For major changes, please open an issue first to discuss your ideas.
 
 ---
-Enjoy using the Flexible Independent Counter App!
+Enjoy using the React Counter App!
