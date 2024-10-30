@@ -14,7 +14,8 @@ A React-based counter application where each counter operates independently with
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/independent-counter-app.git
+   git clone https://github.com/nklxsns/React-Counter.git
+   cd React-Counter
    ```
 
 2. **Install dependencies:**
@@ -60,4 +61,3 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 Enjoy using the Flexible Independent Counter App!
-```
