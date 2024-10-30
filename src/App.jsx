@@ -6,6 +6,7 @@ function App() {
   const [counters, setCounters] = useState([]);
   const [value, setValue] = useState(1);
 
+  
   const addCounter = (val) => {
     setCounters([...counters, { id: Date.now(), val: val }]);
   };
