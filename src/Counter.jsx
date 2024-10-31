@@ -1,22 +1,28 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Counter = ({ id, onDelete, counterValue }) => {
-  const [count, setCount] = React.useState(0);
-  const [isPlaying, setIsPlaying] = React.useState(true);
-  const [direction, setDirection] = React.useState(1);
+  const [count, setCount] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [direction, setDirection] = useState(1);
+  const intervalTime = 1000; // Fixed interval time in milliseconds
 
   useEffect(() => {
     if (!isPlaying || (count === 0 && direction === -1)) return;
 
     const interval = setInterval(() => {
       setCount((prev) => prev + direction * counterValue);
-    }, 1000);
+    }, intervalTime);
 
     return () => clearInterval(interval);
   }, [isPlaying, direction, count, counterValue]);
 
   return (
-    <div className="border border-gray-700 rounded-lg shadow-lg p-4 bg-gray-800 flex flex-col items-center space-y-2 w-full">
+    <div className="relative border border-gray-700 rounded-lg shadow-lg p-4 bg-gray-800 flex flex-col items-center space-y-2 w-full">
+      {/* Display counterValue at the top corner */}
+      <span className="absolute top-2 right-2 text-sm text-gray-400">
+        Interval: {counterValue}
+      </span>
+
       <span className="font-bold text-xl text-white">{count}</span>
       <div className="flex space-x-2">
         <button
